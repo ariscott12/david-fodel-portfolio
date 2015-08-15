@@ -1,1 +1,9 @@
 .DS_store
+sites/default
+sites/example.sites.php
+sites/README.txt
+sites/all/libraries
+sites/all/modules/contrib
+sites/all/modules/README.txt
+sites/all/themes/minim/README.txt
+sftp-config.json
