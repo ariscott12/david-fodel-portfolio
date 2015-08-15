@@ -6,10 +6,10 @@ module.exports = function(grunt) {
             dist: {
 
                 files: {
-                    "css/main.css": "sass/main.scss",
+                    "sites/all/themes/minim/css/main.css": "sites/all/themes/minim/sass/main.scss",
                 },
                 options: { // Target options
-                    includePaths: require("node-bourbon").includePaths,
+                    includePaths: require("node-neat").includePaths,
                     style: "compact"
 
                 }
@@ -18,7 +18,7 @@ module.exports = function(grunt) {
         watch: {
             sass: {
                 files: [
-                    "sass/*.scss"
+                    "sites/all/themes/minim/sass/main.scss"
                 ],
                 tasks: "sass"
             },
