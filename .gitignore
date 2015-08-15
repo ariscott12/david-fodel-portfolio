@@ -7,3 +7,4 @@ sites/all/modules/contrib
 sites/all/modules/README.txt
 sites/all/themes/minim/README.txt
 sftp-config.json
+node_modules/
