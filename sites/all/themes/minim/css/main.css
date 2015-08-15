@@ -1,0 +1,15 @@
+html {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+h1 {
+  float: left;
+  display: block;
+  margin-right: 2.3576515979%;
+  width: 48.821174201%; }
+  h1:last-child {
+    margin-right: 0; }
