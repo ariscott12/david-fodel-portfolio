@@ -1,0 +1,4 @@
+name = David Fodel Home Page Banner
+description = Provdides block and admin form for home page banner.
+core = 7.x
+package = David Fodel

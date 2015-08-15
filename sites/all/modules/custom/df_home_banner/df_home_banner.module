@@ -1,0 +1,45 @@
+<?php
+
+function df_home_banner_permission() {
+  return array(
+    'admin home page banner' => array(
+      'title' => 'Administer Home Page Banner'
+    )
+  );
+}
+
+function df_home_banner_menu() {
+  $items = array();
+  $items['admin/content/home-page-banner'] = array(
+    'title' => 'Admin Home Page Banner',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('df_home_banner_form'),
+    'access arguments' => array('admin home page banner'),
+    'file' => 'df_home_banner.admin.inc',
+    'file path' => drupal_get_path('module', 'df_home_banner') . '/includes',
+    'type' => MENU_LOCAL_TASK
+  );
+  return $items;
+}
+
+function df_home_banner_block_info() {
+  $blocks = array();
+  $blocks['home_banner'] = array(
+    'info' => t('Home Page Banner')
+  );
+  return $blocks;
+}
+
+function df_home_banner_block_view($delta) {
+  $blocks = array();
+  if ($delta == 'home_banner') {
+    $file = variable_get('home_page_banner_path', FALSE);
+    $text = variable_get('home_page_banner_text', FALSE);
+    $blocks['content'] = array(
+      '#theme' => 'field_image_banner',
+      '#file' => $file,
+      '#text' => $text
+    );
+  }
+  return $blocks;
+}
