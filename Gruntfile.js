@@ -6,7 +6,7 @@ module.exports = function(grunt) {
             dist: {
 
                 files: {
-                    "sites/all/themes/minim/css/main.css": "sites/all/themes/minim/sass/main.scss",
+                    "sites/all/themes/minim/css/content.css": "sites/all/themes/minim/sass/main.scss",
                 },
                 options: { // Target options
                     includePaths: require("node-neat").includePaths,
@@ -18,7 +18,11 @@ module.exports = function(grunt) {
         watch: {
             sass: {
                 files: [
-                    "sites/all/themes/minim/sass/main.scss"
+                    "sites/all/themes/minim/sass/atoms/*.scss",
+                    "sites/all/themes/minim/sass/molecules/*.scss",
+                    "sites/all/themes/minim/sass/utilities/*.scss",
+                    "sites/all/themes/minim/sass/organisms/*.scss",
+                    "sites/all/themes/minim/sass/*.scss"
                 ],
                 tasks: "sass"
             },
