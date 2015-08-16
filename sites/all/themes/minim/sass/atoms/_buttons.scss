@@ -1,0 +1,16 @@
+.button-arrow-down {
+    display: inline-block;
+    height: 38px;
+    margin-right: 15px;
+    width: 38px;
+    border: 1px solid $font-color-white;
+    @include border-top-radius(40px);
+    @include border-bottom-radius(40px);
+    @include border-left-radius(40px);
+    @include border-right-radius(40px);
+    img {
+        left: 11px;
+        position: relative;
+        top: 6px;
+    }
+}

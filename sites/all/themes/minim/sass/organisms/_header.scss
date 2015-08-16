@@ -1,0 +1,18 @@
+.header {
+    background: $primary-color-1;
+    .block-menu {
+        &:after {
+            clear: both;
+            content: ".";
+            display: block;
+            height: 0;
+            visibility: hidden;
+        }
+        h2 {
+            float: left;
+            color: $font-color-white;
+            text-transform: uppercase;
+            padding-top:20px;
+        }
+    }
+}

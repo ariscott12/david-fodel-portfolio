@@ -1,0 +1,8 @@
+.footer-wrapper {
+	background: $black-dark;
+	color: $font-color-white; 
+
+	.block-webform {
+		@include span-column(6);
+	}
+}

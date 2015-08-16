@@ -1,0 +1,6 @@
+.contain {
+	@include outer-container;
+}
+.clear {
+	clear:both;
+}

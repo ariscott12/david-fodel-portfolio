@@ -1,0 +1,17 @@
+.title-bar {
+    background: $primary-color-1;
+    padding: 8px 0 13px 0;
+    .title-wrapper {
+        margin: 0 auto;
+        width: 180px;
+    }
+    h3 {
+        color: $font-color-white;
+        text-align: center;
+        font-size: 1.25rem;
+        font-weight: $font-weight-normal;
+        position:relative;
+        top:7px;
+        display:inline-block;
+    }
+}
