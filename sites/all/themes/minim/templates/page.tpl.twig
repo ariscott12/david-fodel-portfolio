@@ -1,30 +1,45 @@
 <div id="page">
-  <header id="header" role="banner">
-    {% if logo %}
-      <a href="{{front_page}}" title="home" rel="home" id="logo"><img src="{{logo}}" alt="Home" /></a>
-    {% endif %}
-    {% if site_name && site_slogan %}
-      <hgroup id="name-and-slogan">
-        {% if site_name %}
-          <h1 id="site-name">
-            <a href="{{front_page}}" title="Home" rel="home"><span>{{site_name}}</span></a>
-          </h1>
-        {% endif %}
-        {% if site_slogan %}
-          <h2 id="site-slogan">{{site_slogan}}</h2>
-        {% endif %}
-      </hgroup><!-- /#name-and-slogan -->
-    {% endif %}
-    {% render(page.header) %}
+  <header class="header" role="banner">
+    <div class = "contain">
+      {% if logo %}
+        <a href="{{front_page}}" title="home" rel="home" id="logo"><img src="{{logo}}" alt="Home" /></a>
+      {% endif %}
+      {% if site_name && site_slogan %}
+        <hgroup id="name-and-slogan">
+          {% if site_name %}
+            <h1 id="site-name">
+              <a href="{{front_page}}" title="Home" rel="home"><span>{{site_name}}</span></a>
+            </h1>
+          {% endif %}
+          {% if site_slogan %}
+            <h2 id="site-slogan">{{site_slogan}}</h2>
+          {% endif %}
+        </hgroup><!-- /#name-and-slogan -->
+      {% endif %}
+      {% render(page.header) %}
+    </div>
   </header>
+  <div class = "clear"></div>
   {% render(page.banner) %}
   <div id="main">
     {% render(page.highlighted) %}
-    {{breadcrumb}}
+   <!-- {{breadcrumb}} -->
     <a id="main-content"></a>
     {% render(page.title_prefix) %}
-    {% if title %}
-      <h1 class="title" id="page-title">{{title}}</h1>
+    
+    {% if page %}
+      {% if title == 'Recent Work' %}
+        <div class = "title-bar">
+          <div class = "title-wrapper">
+            <div class = "button-arrow-down"><img src = " {{arrow_down}}" /></div>
+            <h3 class="title contain" id="page-title">{{title}}</h3>
+          </div>
+        </div>
+      {% elseif title == 'test' %}
+        <h1 class="title2" id="page-title">{{title}}</h1>
+      {% else %}
+        <h1 class="title3" id="page-title">{{title}}</h1>
+      {% endif %}
     {% endif %}
     {% render(page.title_suffix) %}
     {{messages}}
@@ -33,8 +48,14 @@
     {% if action_links %}
       <ul class="action-links">{% render(action_links) %}</ul>
     {% endif %}
-    {% render(page.content) %}
+    <div class = "contain">
+      {% render(page.content) %}
+    </div>
     {{feed_icons}}
   </div><!-- /#main -->
-  {% render(page.footer) %}
+  <div class = "footer-wrapper">
+    <div class = "contain">
+      {% render(page.footer) %}
+    </div>
+  </div>
 </div><!-- /#page -->
