@@ -10,6 +10,16 @@ function minim_preprocess_html(&$variables) {
   // Suggest seperate header and footer script variables in addition to scripts if needed.
   $variables['header_scripts'] = drupal_get_js('header');
   $variables['footer_scripts'] = drupal_get_js('footer');
+
+  // Add css fonts to head
+  $css_options = array('type' => 'external', 'group' => CSS_THEME);
+  drupal_add_css('ttp://fonts.googleapis.com/css?family=Lato:400,900,700,300', $css_options);
+
+}
+
+function minim_preprocess_page(&$variables) {
+  global $base_path;
+  $variables['arrow_down'] = $base_path . drupal_get_path('theme', 'minim') . '/images/icon-arrow-down.png';
 }
 
 function minim_preprocess_node(&$v) {
@@ -20,7 +30,9 @@ function minim_preprocess_node(&$v) {
 }
 
 function minim_preprocess_node__page(&$v) {
+
   $v['body'] = drupal_render($v['content']['body']);
+
 }
 
 function minim_preprocess_node__project(&$v) {
