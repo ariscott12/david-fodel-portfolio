@@ -1,7 +1,22 @@
 @import "bourbon";
+$max-width: 1180px;
+$gutter: 80px;
 @import "neat";
 
-h1 {
-	 @include span-columns(6);
+//** ATOMS **//
+@import "atoms/variables.scss";
+@import "atoms/base.scss";
+@import "atoms/buttons.scss";
 
-}
+//** MOLECULES **//
+@import "molecules/navigation.scss";
+@import "molecules/banners.scss";
+@import "molecules/page-titles.scss";
+
+//** ORGANISMS **//
+@import "organisms/header.scss";
+@import "organisms/footer.scss";
+
+//** UTILITIES **//
+@import "utilities/sanatize.scss";
+@import "utilities/helpers.scss";
