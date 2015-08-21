@@ -21,10 +21,10 @@
   </header>
   <div class = "clear"></div>
   {% render(page.banner) %}
-  <div id="main">
+  <div class="main-content">
     {% render(page.highlighted) %}
    <!-- {{breadcrumb}} -->
-    <a id="main-content"></a>
+   {#  <a id="main-content"></a> #}
     {% render(page.title_prefix) %}
     
     {% if page %}
@@ -32,15 +32,17 @@
         <div class = "title-bar">
           <div class = "title-wrapper">
             <div class = "button-arrow-down"><img src = " {{arrow_down}}" /></div>
-            <h3 class="title contain" id="page-title">{{title}}</h3>
+            <h3 class="title contain" >{{title}}</h3>
           </div>
         </div>
-      {% elseif title == 'test' %}
-        <h1 class="title2" id="page-title">{{title}}</h1>
       {% else %}
-        <h1 class="title3" id="page-title">{{title}}</h1>
+        <div class = "title-wrapper">
+        <h2 class="title">{{title}}</h2>
+        </div>
       {% endif %}
     {% endif %}
+
+
     {% render(page.title_suffix) %}
     {{messages}}
     {% render(tabs) %}
