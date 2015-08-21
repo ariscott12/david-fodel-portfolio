@@ -1,0 +1,63 @@
+.view-recent-work {
+    .views-row {
+        margin-bottom: 34px;
+    }
+}
+
+.recent-work-img {
+    box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.11);
+    border: 1px solid #dfdfdf;
+    width: 50%;
+    height: 208px;
+}
+
+.recent-work-body {
+    height: 209px;
+    background: #fff;
+    width: 50%;
+    text-align: center;
+    padding: 24px 0 24px 0;
+    border: 1px solid #dfdfdf;
+    box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.11);
+    h4 {
+        font-size: 1.7rem;
+        margin-bottom: 14px;
+    }
+    p {
+        font-size: .85rem;
+        padding: 0 110px;
+        line-height: 18px;
+        margin-bottom: 8px;
+    }
+    .more-link {
+        text-align: center;
+        font-style: italic;
+        color: $primary-color-1;
+        font-weight: bold;
+        font-size: .925rem;
+        background: url("../images/icon-arrow-right-sml.png") no-repeat scroll 100% 0;
+        height: 25px;
+        line-height: 24px;
+        margin: 15px auto;
+        width:180px;
+        display:block;
+    }
+}
+
+.views-row-odd {
+    .recent-work-body {
+        float: right;
+    }
+    .recent-work-img {
+        float: left;
+    }
+}
+
+.views-row-even {
+    .recent-work-body {
+        float: left;
+    }
+    .recent-work-img {
+        float: right;
+    }
+}
