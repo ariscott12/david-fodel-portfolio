@@ -3,6 +3,13 @@
 	h1 {
 		position:absolute;
 		top:0;
+		font-weight:$font-weight-heavy;
+		font-size:3.75em;
+		color: $font-color-white;
+		text-transform: uppercase;
+		line-height:64px;
+		left:16%;
+		top:27%;
 	}
 	img {
 		width:100%;
