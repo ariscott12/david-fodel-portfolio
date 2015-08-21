@@ -1,6 +1,7 @@
 .title-bar {
     background: $primary-color-1;
     padding: 8px 0 13px 0;
+    margin-bottom:96px;
     .title-wrapper {
         margin: 0 auto;
         width: 180px;
@@ -14,4 +15,15 @@
         top:7px;
         display:inline-block;
     }
+}
+.title-wrapper {
+	// background:$black-dark;
+	// margin-bottom:96px;
+	h2 {
+		color:$white;
+		padding:70px 0;
+		text-align:center;
+		font-weight:$font-weight-heavy;
+		font-size:4rem;
+	}
 }
