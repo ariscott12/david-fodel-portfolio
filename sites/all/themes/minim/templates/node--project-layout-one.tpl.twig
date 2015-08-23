@@ -1,9 +1,14 @@
-<article class="node node-type-project node-project-layout-one">
-  {{ date }}
-  {{ body }}
+<article class="node node-project-layout node-project-layout-one">
+	<span class = "date-display-single">{{ date }}</span>
+	<h3>{{title}}</h3>
+<div class = "media">
   {% for image in images %}
     {{ image }}
   {% endfor %}
+
   {{ video }}
+</div>
+  {{ body }}
   {{ tags }}
 </article>
+ 

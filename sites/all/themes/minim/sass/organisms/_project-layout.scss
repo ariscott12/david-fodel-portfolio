@@ -1,0 +1,44 @@
+.node-project-layout-one {
+    .media {
+        @include span-columns(6);
+        img {
+            max-width: 94%;
+            margin-bottom: 40px;
+        }
+    }
+    .field-name-body {
+        @include span-columns(6);
+        @include omega();
+    }
+}
+
+.node-project-layout {
+    .field-name-body {
+        p,
+        li {
+            font-size: 0.9em;
+            line-height: 20px;
+            margin-bottom: 15px;
+        }
+        ul {
+            margin-left: 15px;
+        }
+        li {
+            list-style-type: none;
+        }
+    }
+    h3 {
+        font-size: 1.35em;
+        margin-bottom: 30px;
+    }
+    a {
+        color: $primary-color-1;
+        font-style: italic;
+    }
+    .date-display-single {
+        font-weight: $font-weight-light;
+        font-style: italic;
+        color: #777;
+        font-size: .925em;
+    }
+}
