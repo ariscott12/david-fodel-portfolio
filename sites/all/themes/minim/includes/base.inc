@@ -30,13 +30,13 @@ function minim_preprocess_node(&$v) {
 }
 
 function minim_preprocess_node__page(&$v) {
-
   $v['body'] = drupal_render($v['content']['body']);
-
 }
 
 function minim_preprocess_node__project(&$v) {
+
   $node = $v['node'];
+
   $l = $node->language;
   // Pick Layout
   if (!empty($node->field_layout[$l])) {
@@ -59,6 +59,10 @@ function minim_preprocess_node__project(&$v) {
     $date = date('F jS, Y', strtotime($date)); 
     $v['date'] = $date;
   }
+  if (!empty($node->field_full_title[$l])) {
+    $v['title'] = $node->field_full_title[$l][0]['value'];
+  }
+
   if (!empty($node->field_project_tags[$l])) {
     $tags = array();
     foreach ($node->field_project_tags[$l] AS $field) {
