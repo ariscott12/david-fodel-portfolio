@@ -1,17 +1,18 @@
+.region-banner {
+	height:504px;
+    background: url("../images/homepage-banner.jpg") no-repeat scroll;
+
+}
+
 .block-df-home-banner {
 	position:relative;
 	h1 {
-		position:absolute;
-		top:0;
 		font-weight:$font-weight-heavy;
 		font-size:3.75em;
 		color: $font-color-white;
 		text-transform: uppercase;
 		line-height:64px;
-		left:16%;
-		top:27%;
-	}
-	img {
-		width:100%;
+		padding-top: 116px;
 	}
 }
+
